@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
-    <title>basedbin</title>
+    <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
     <div class="main-box">{% block content %}{% endblock %}</div>

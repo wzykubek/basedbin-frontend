@@ -38,3 +38,16 @@ body {
     width: 90vw;
   }
 }
+
+.http-error-code, .http-error-mess {
+  text-align: center;
+}
+
+.http-error-code {
+  font-size: 60px;
+}
+
+.http-error-mess {
+  font-size: 30px;
+  display: block;
+}

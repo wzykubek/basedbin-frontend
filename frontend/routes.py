@@ -7,7 +7,7 @@ import json
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return "<h1>404</h1>", 404
+    return render_template("errors/404.html", message="Not Found"), 404
 
 
 @app.route("/")

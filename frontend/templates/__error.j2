@@ -1,6 +1,6 @@
 {% extends "index.j2" %}
-{% block title %}404 {{ message }}{% endblock %}
+{% block title %}{{ code }} {{ message }}{% endblock %}
 {% block content %}
-<h1 class="http-error-code">404</h1>
+<h1 class="http-error-code">{{ code }}</h1>
 <span class="http-error-mess">{{ message }}</span>
 {% endblock %}

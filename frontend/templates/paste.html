@@ -3,11 +3,10 @@
   <span class="file-name">{{ file_name }}</span>
 </div>
 <div>
-  <span class="upload-date">{{ date }}</span>
-  <span class="upload-date">{{ time }}</span>
+  <span class="upload-date">{{ date }} {{ time }}</span>
 </div>
 <br />
-<div>
+<div class="content-box">
   <span class="content" style="white-space: pre-line">{{ content }}</span>
 </div>
 {% endblock %}

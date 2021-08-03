@@ -1,13 +1,16 @@
 body {
   margin: 0;
+  font-family: monospace;
 }
 
 .main-box {
-  background-color: #888;
+  -moz-box-shadow: 0 0 5px #666;
+  -webkit-box-shadow: 0 0 5px #666;
+  box-shadow: 0 0 5px #666;
   margin: auto;
-  width: 1100px;
-  height: 100vh;
-  padding: 10px;
+  width: 1000px;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .file-name {
@@ -15,6 +18,23 @@ body {
   font-weight: 600;
 }
 
+.upload-date {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.content-box {
+  border-top: 1px solid rgb(197, 197, 197);
+  border-radius: 2px;
+  padding-top: 10px;
+}
+
 .content {
   white-space: pre-line;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-box {
+    width: 90vw;
+  }
 }

@@ -1,14 +1,16 @@
 {% extends "index.j2" %}
 {% block title %}{{ file_name }}{% endblock %}
 {% block content %}
-<div>
-  <span class="file-name">{{ file_name }}</span>
-</div>
-<div>
-  <span class="upload-date">{{ date }} {{ time }}</span>
-</div>
-<br />
-<div class="content-box">
-  <span class="content">{{ content }}</span>
+<div class="main-box">
+  <div>
+    <span class="file-name">{{ file_name }}</span>
+  </div>
+  <div>
+    <span class="upload-date">{{ date }} {{ time }}</span>
+  </div>
+  <br />
+  <div class="content-box">
+    <span class="content">{{ content }}</span>
+  </div>
 </div>
 {% endblock %}

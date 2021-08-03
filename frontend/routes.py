@@ -7,7 +7,7 @@ import json
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template("errors/404.html", message="Not Found"), 404
+    return render_template("errors/404.j2", message="Not Found"), 404
 
 
 @app.route("/")
@@ -27,5 +27,5 @@ def get_paste(paste_id: str):
     time = datetime.strftime("%H:%M:%S")
     content = paste["file_content"]
     return render_template(
-        "paste.html", file_name=file_name, date=date, time=time, content=content
+        "paste.j2", file_name=file_name, date=date, time=time, content=content
     )

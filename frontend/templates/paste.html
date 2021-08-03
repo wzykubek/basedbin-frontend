@@ -1,0 +1,13 @@
+{% extends "index.html" %}{% block content %}
+<div>
+  <span class="file-name">{{ file_name }}</span>
+</div>
+<div>
+  <span class="upload-date">{{ date }}</span>
+  <span class="upload-date">{{ time }}</span>
+</div>
+<br />
+<div>
+  <span class="content" style="white-space: pre-line">{{ content }}</span>
+</div>
+{% endblock %}

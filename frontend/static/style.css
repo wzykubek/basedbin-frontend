@@ -28,6 +28,10 @@ body {
   margin-top: -17px;
 }
 
+.buttons-box a {
+  text-decoration: none;
+}
+
 .buttons-box button {
   background-color: rgb(241 241 241);
   border: 1px solid rgb(197, 197, 197);

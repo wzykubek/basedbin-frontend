@@ -37,3 +37,14 @@ def raw_paste(paste_id: str):
     paste = pastes.get_paste(paste_id)
     content = paste["file_content"]
     return Response(content, mimetype="text/plain")
+
+
+@app.route("/dl/<paste_id>")
+def download_paste(paste_id: str):
+    paste = pastes.get_paste(paste_id)
+    content = paste["file_content"]
+    content_type = paste["content_type"]
+    file_name = paste["file_name"]
+    response = Response(content, mimetype=content_type)
+    response.headers["Content-Disposition"] = f'attachment; filename="{file_name}"'
+    return response

@@ -23,6 +23,23 @@ body {
   font-style: italic;
 }
 
+.buttons-box {
+  float: right;
+  margin-top: -17px;
+}
+
+.buttons-box button {
+  background-color: rgb(241 241 241);
+  border: 1px solid rgb(197, 197, 197);
+  transition: .5s;
+  padding: 0 6px;
+}
+
+.buttons-box button:hover {
+  background-color: rgb(197, 197, 197);
+  cursor: pointer;
+}
+
 .content-box {
   border-top: 1px solid rgb(197, 197, 197);
   border-radius: 2px;
@@ -39,7 +56,8 @@ body {
   }
 }
 
-.http-error-code, .http-error-mess {
+.http-error-code,
+.http-error-mess {
   text-align: center;
 }
 

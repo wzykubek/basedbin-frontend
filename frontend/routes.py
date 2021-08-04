@@ -1,5 +1,5 @@
 from frontend import app, helpers, client, pastes
-from flask import jsonify, render_template
+from flask import jsonify, render_template, Response
 import requests
 import json
 
@@ -23,5 +23,17 @@ def paste(paste_id: str):
     time = datetime.strftime("%H:%M:%S")
     content = paste["file_content"]
     return render_template(
-        "paste.j2", file_name=file_name, date=date, time=time, content=content
+        "paste.j2",
+        file_name=file_name,
+        date=date,
+        time=time,
+        content=content,
+        paste_id=paste_id,
     )
+
+
+@app.route("/raw/<paste_id>")
+def raw_paste(paste_id: str):
+    paste = pastes.get_paste(paste_id)
+    content = paste["file_content"]
+    return Response(content, mimetype="text/plain")

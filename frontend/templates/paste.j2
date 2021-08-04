@@ -8,6 +8,11 @@
   <div>
     <span class="upload-date">{{ date }} {{ time }}</span>
   </div>
+  <div class="buttons-box">
+    <a href="{{ url_for('raw_paste', paste_id=paste_id) }}">
+      <button>raw</button>
+    </a>
+  </div>
   <br />
   <div class="content-box">
     <span class="content">{{ content }}</span>

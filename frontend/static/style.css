@@ -95,6 +95,7 @@ button:hover, .submit-input:hover {
   color: black;
   border: none;
   background-color: #fff;
+  cursor: text;
 }
 
 .upload-form .name-input {

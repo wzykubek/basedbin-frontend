@@ -48,9 +48,7 @@ def download_paste(paste_id: str):
 @app.route("/upload", methods=["POST"])
 def upload():
     file_name = request.form["file_name"]
-    print(file_name)
     file_content = request.form["file_content"]
-    print(file_content)
     status = pastes.add_new_paste(file_content, file_name)
     paste_id = status["paste_id"]
     return redirect(url_for("paste", paste_id=paste_id))

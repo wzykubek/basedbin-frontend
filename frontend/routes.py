@@ -6,7 +6,7 @@ import json
 
 @app.route("/")
 def home():
-    return render_template("home.j2")
+    return render_template("upload.j2")
 
 
 @app.route("/<paste_id>")
@@ -45,13 +45,8 @@ def download_paste(paste_id: str):
     return response
 
 
-@app.route("/upload")
+@app.route("/upload", methods=["POST"])
 def upload():
-    return render_template("upload.j2")
-
-
-@app.route("/upload_", methods=["POST"])
-def upload_():
     file_name = request.form["file_name"]
     print(file_name)
     file_content = request.form["file_content"]

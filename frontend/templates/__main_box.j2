@@ -1,9 +1,14 @@
 {% extends "__index.j2" %}
 {% block index_content %}
 <div class="main-box">
-  <a href="/" class="title-link">
-    <h1 class="title"><span>based</span>bin</h1>
-  </a>
+  <header>
+    <a href="{{ url_for('home') }}" class="title-link">
+      <h1 class="title"><span>based</span>bin</h1>
+    </a>
+    <a href="{{ url_for('upload') }}" class="upload-but-link">
+      <button class="upload-but">New paste</button>
+    </a>
+  </header>
   {% block box_content %}{% endblock %}
 </div>
 {% endblock %}

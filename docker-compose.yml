@@ -1,0 +1,37 @@
+version: "3.1"
+
+services:
+  db:
+    image: mongo
+    restart: on-failure
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - ./data:/data/db
+
+  server:
+    image: ghcr.io/samedamci/basedbin:latest
+    restart: on-failure
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: example
+    depends_on:
+      - db
+
+  frontend:
+    build: .
+    restart: on-failure
+    environment:
+      SERVER_HOSTNAME: server
+    depends_on:
+      - server
+
+  nginx:
+    build: ./services/nginx
+    restart: on-failure
+    ports:
+      - 8080:80
+    depends_on:
+      - frontend

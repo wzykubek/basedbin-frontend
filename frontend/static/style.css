@@ -13,6 +13,24 @@ body {
   padding: 20px;
 }
 
+.title {
+  font-size: 2.5rem;
+  margin-left: 35px;
+  letter-spacing: 5px;
+  display: inline-block;
+  box-shadow: 3px 3px 10px #666;
+  padding: 0 15px;
+  margin-bottom: 50px;
+}
+
+.title-link {
+  color: black;
+}
+
+.title span {
+  color: #666;
+}
+
 .file-name {
   font-size: 25px;
   font-weight: 600;

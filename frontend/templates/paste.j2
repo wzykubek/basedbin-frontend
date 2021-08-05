@@ -1,24 +1,22 @@
-{% extends "index.j2" %}
+{% extends "__main_box.j2" %}
 {% block title %}{{ file_name }}{% endblock %}
-{% block content %}
-<div class="main-box">
-  <div>
-    <span class="file-name">{{ file_name }}</span>
-  </div>
-  <div>
-    <span class="upload-date">{{ date }} {{ time }}</span>
-  </div>
-  <div class="buttons-box">
-    <a href="{{ url_for('raw_paste', paste_id=paste_id) }}">
-      <button>raw</button>
-    </a>
-    <a href="{{ url_for('download_paste', paste_id=paste_id) }}">
-      <button>download</button>
-    </a>
-  </div>
-  <br />
-  <div class="content-box">
-    <textarea rows="40" disabled="true">{{ content }}</textarea>
-  </div>
+{% block box_content %}
+<div>
+  <span class="file-name">{{ file_name }}</span>
+</div>
+<div>
+  <span class="upload-date">{{ date }} {{ time }}</span>
+</div>
+<div class="buttons-box">
+  <a href="{{ url_for('raw_paste', paste_id=paste_id) }}">
+    <button>raw</button>
+  </a>
+  <a href="{{ url_for('download_paste', paste_id=paste_id) }}">
+    <button>download</button>
+  </a>
+</div>
+<br />
+<div class="content-box">
+  <textarea rows="40" disabled="true">{{ content }}</textarea>
 </div>
 {% endblock %}

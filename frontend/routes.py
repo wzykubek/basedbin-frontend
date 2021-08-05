@@ -6,7 +6,7 @@ import json
 
 @app.route("/")
 def home():
-    return "<h1>basedbin</h1>"
+    return render_template("home.j2")
 
 
 @app.route("/<paste_id>")
